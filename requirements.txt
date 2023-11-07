@@ -1,3 +1,4 @@
-goblet-gcp==0.11.4
-slack_sdk==3.21.3
-google-cloud-bigquery==3.11.4
+# Function dependencies, for example:
+# package>=version
+google-cloud-bigquery
+google-cloud-logging>=3.0.0

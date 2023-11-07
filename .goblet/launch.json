@@ -1,0 +1,16 @@
+{
+    "configurations": [
+      {
+        "name": "Deploy Cloud Function",
+        "type": "cloudcode.cloudfunctions",
+        "request": "launch",
+        "functionName": "peak_daily_cost_alert",
+        "region": "us-east1",
+        "gen": "GEN_1",
+        "revision": "8",
+        "entryPoint": "peak_daily_cost_alert",
+        "runtime": "python311",
+        "testInput": ""
+      }
+    ]
+  }

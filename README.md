@@ -1,34 +1,11 @@
-# Cost Alerts
+# Spike cost alert in GCP 
+This Cloud Functions Python script sents a Cloud Monitoring alert vía email to desingated users. 
 
-Publish alerts daily on a per service basis to a slack channel when any large percentage cost increase or decrease occurs.
+It's triggered by peaking in costs. You can configure it to alert when a service or a project's cost is above certain threshold in day to day analysis. 
 
-![slack message](slack_message.png)
+# How to deploy 
 
-## Written Tutorial
+Creat cloud function and upload the code to the source 
 
-[Tutorial](https://engineering.premise.com/tutorial-cost-spike-alerting-for-google-cloud-platform-gcp-46fd26ae3f6a)
-
-## Install
-
-* pip install goblet-gcp
-
-## Prerequisites 
-
-* GCP Account
-* Python environment (>3.8) 
-* Gcloud cli 
-* Slack Webhook
-
-## Setup
-
-* Set the following varibles in `.goblet/config.json`
-
-    * "SLACK_WEBHOOK"
-    * "BILLING_ORG"
-    * "BILLING_ID"
-    * "BQ_TABLE
-    * "SERVICE_ACCOUNT_EMAIL" 
-
-## Deploy 
-
-* run ```goblet deploy --project=PROJECT --location LOCATION```
+Entrypoint: peak_daily_cost_alert
+Runtime : Python 3.11 
